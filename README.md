@@ -62,5 +62,13 @@ El flujo de vida de una escena funciona de la siguiente manera:
 
 En el método Init se inicializan todas las variables, en preload se cargan los assets del juego, en create se crea el escenario y en upload se actualiza la escena; normalmente se ejecuta este último método 50 veces por segundo.
 
+### Creación de escenas
+
+Tenemos que crear una escena de carga para nuestro juego que se mostrará mientras todos los assets del juego están cargando.
+La estructura de las escenas iniciales de nuestro juego sería la siguiente:
+
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/b74eb9bf-ffc3-41a3-af95-58148a9cce39)
+
+
 
 
