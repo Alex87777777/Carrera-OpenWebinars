@@ -36,4 +36,13 @@ Phaser es un framework gratis y open source para desarrollo de videojuegos HTML5
 
 ### Introducción a Typescript
 
-Typescript es un superconjunto de Javascript ES5 y ES6, por lo que cuenta con todas las funcionalidades de estes. Su ventaja que tiene sobre los anteriores nombrados es que cuenta con tipado estático, privacidad para variables y es más eficaz para proyectos grandes.
+Typescript es un superconjunto de Javascript ES5 y ES6, por lo que cuenta con todas las funcionalidades de estes. Su ventaja que tiene sobre los anteriores nombrados es que cuenta con tipado estático como se puede ver en la siguiente imagen:
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/5627cec6-f050-4aa2-a11c-766335f28403)
+También tiene la característica de privacidad para variables y es más eficaz para proyectos grandes. Sin embargo para poder ser ejecutado desde navegador, tendremos que traducir el código a javascript.
+
+### Entorno de desarrollo 
+
+Para trabajar con Typescript necesitamos instalar NodeJS y GitBash y pdoemos usar Visual Studio Code como entorno de desarrollo. Necesitamos crear un archivo JSON en el que estableceremos la configuración de compilado del proyecto:
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/0d36699a-e94b-462e-bc84-8e5682fa3bef)
+Donde "target" es el lenguaje al que queremos traducir, "rootDir" es el directorio del proyecto y "outDir" el directorio destino.
+
