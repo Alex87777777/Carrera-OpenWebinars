@@ -25,3 +25,15 @@ Una buena página para publicar nuestro juego, una vez que lo tengamos acabado y
 __·8/7/2024__
 
 ## Curso de Phaser
+
+### Introducción a videojuegos HTML5
+
+Los videojuegos HTML5 se ejecutan desde el navegador y no necesitan una instalación previa. Igualmente permite el uso de animaciones, sonido y juego en red entre otras cosas. El código de estos juegos está en Javascript y se ejecutan a través de un contenedor como podría ser WebGL.
+
+### Introducción a Phaser
+
+Phaser es un framework gratis y open source para desarrollo de videojuegos HTML5. Está desarrollado en Javascript moderno, aunque a partir de la versión 4 está hecho con Typescript.
+
+### Introducción a Typescript
+
+Typescript es un superconjunto de Javascript ES5 y ES6, por lo que cuenta con todas las funcionalidades de estes. Su ventaja que tiene sobre los anteriores nombrados es que cuenta con tipado estático, privacidad para variables y es más eficaz para proyectos grandes.
