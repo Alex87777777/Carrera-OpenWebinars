@@ -50,3 +50,17 @@ Para trabajar con Typescript necesitamos instalar NodeJS y GitBash y pdoemos usa
 
 Donde "target" es el lenguaje al que queremos traducir, "rootDir" es el directorio del proyecto y "outDir" el directorio destino.
 
+### Configuración del juego
+
+Necesitamos tener un objeto de configuración en el que definiremos el tipo de contenedor del juego, el color de fondo, el ancho, el alto y la escena principal del juego.
+
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/6424250c-2a0c-4d25-a505-5fe14aa4c704)
+
+El flujo de vida de una escena funciona de la siguiente manera:
+
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/8d277dd3-f80f-4f35-87eb-a6b59fe2017e)
+
+En el método Init se inicializan todas las variables, en preload se cargan los assets del juego, en create se crea el escenario y en upload se actualiza la escena; normalmente se ejecuta este último método 50 veces por segundo.
+
+
+
