@@ -69,6 +69,8 @@ La estructura de las escenas iniciales de nuestro juego sería la siguiente:
 
 ![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/b74eb9bf-ffc3-41a3-af95-58148a9cce39)
 
+__·9/7/2024__
+
 Para solucionar el reto que nos propone el profesor, de añadir un texto que al hacerle click aumente la puntuación en el HUD podemos hacer lo siguiente, primero, en la escena principal hacemos que el texto sea interactivo con setInteractive(), y le damos la funcionalidad de aumentar la puntuación, cargar esta variable y lo mandamos como evento:
 
 ```typescript
@@ -89,3 +91,9 @@ private actualizaPuntuacion(): void {
 }
 ```
 Phaser.Utils.String.Pad sirve para rellenar con "0" la puntuación (máximo 3).
+
+### Creación de niveles
+
+Es recomendable crear una clase en la que endremos todas nuestras constantes, y luego importarla en las clases que usen esas constantes
+
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/cd751c16-0292-49f1-aab9-c938e09726b2)
