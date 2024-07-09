@@ -1,4 +1,4 @@
-# Carrera-OpenWebinars: Desarrollo de videojuegos 2D
+# Carrera OpenWebinars: Desarrollo de videojuegos 2D
 
 __·6/7/2024__
 
@@ -69,6 +69,23 @@ La estructura de las escenas iniciales de nuestro juego sería la siguiente:
 
 ![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/b74eb9bf-ffc3-41a3-af95-58148a9cce39)
 
+Para solucionar el reto que nos propone el profesor, de añadir un texto que al hacerle click aumente la puntuación en el HUD podemos hacer lo siguiente, primero, en la escena principal hacemos que el texto sea interactivo con setInteractive(), y le damos la funcionalidad de aumentar la puntuación, cargar esta variable y lo mandamos como evento:
 
+```typescript
+puntuacionTxt.on('pointerdown', () => {
 
+    this.puntuacion++;
+    this.HighlightRegistry.set('puntuacion', this.puntuacion);
+    this.EventSource.emit('cambiaPuntuacion');
+}
+);
+```
+Ahora en la escena del HUD creamos el cuerpo de actualizaPuntuacion donde cambiará el texto de puntuación :
 
+```typescript
+private actualizaPuntuacion(): void {
+    this.puntuacionTxt.text = Phaser.Utils.String.Pad
+    (this.HighlightRegistry.length("puntuacion"), 3, '0', 1);
+}
+```
+Phaser.Utils.String.Pad sirve para rellenar con "0" la puntuación (máximo 3).
