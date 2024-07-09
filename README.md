@@ -94,6 +94,14 @@ Phaser.Utils.String.Pad sirve para rellenar con "0" la puntuación (máximo 3).
 
 ### Creación de niveles
 
-Es recomendable crear una clase en la que endremos todas nuestras constantes, y luego importarla en las clases que usen esas constantes
+Es recomendable crear una clase en la que endremos todas nuestras constantes, y luego importarla en las clases que usen esas constantes y también otra clase en la que cargaremos todos los assets del juego.
 
 ![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/cd751c16-0292-49f1-aab9-c938e09726b2)
+
+Para la creación de niveles/mapas podemos usar Tiled que es gratis y ya tengo algo de experiencia gracias al proyecto de móviles.
+
+### Creación del personaje
+
+Debemos juntar las imagenes de cada animación para formar un Atlas usando TexturePacker, que también nos generará el JSON que necesitamos para gestionar las animaciones
+
+Para la gestión del jugador (movimientos, colisiones, etc) se crea una clase nueva exclusiva para esto que extienda de Sprite.
