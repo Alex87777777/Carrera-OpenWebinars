@@ -104,4 +104,8 @@ Para la creación de niveles/mapas podemos usar Tiled que es gratis y ya tengo a
 
 Debemos juntar las imagenes de cada animación para formar un Atlas usando TexturePacker, que también nos generará el JSON que necesitamos para gestionar las animaciones
 
-Para la gestión del jugador (movimientos, colisiones, etc) se crea una clase nueva exclusiva para esto que extienda de Sprite.
+Para la gestión del jugador (movimientos, colisiones, etc) se crea una clase nueva exclusiva para esto que extienda de Sprite. Posteriormente en las clases de cada nivel tenemos que inicializar el jugador en el método create()
+
+Para que el jugador aparezca en el sitio donde lo hayamos puesto en el Tiled debemos hacer lo siguiente a la hora de crearlo:
+
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/ebc0ca73-5f95-41ce-a7bb-e52f7fe0d3f5)
