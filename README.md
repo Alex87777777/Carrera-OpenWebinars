@@ -117,4 +117,6 @@ Para que el jugador aparezca en el sitio donde lo hayamos puesto en el Tiled deb
 
 __·10/7/2024__
 
-Para crear plataformas móviles en nuestro juego, tenemos que crear una clase para ellas que tenga una propiedad de escena, otra de velocidad y una booleana para saber si es horizontal o vertical
+Para crear plataformas móviles en nuestro juego, tenemos que crear una clase para ellas que tenga una propiedad de escena, otra de velocidad y una booleana para saber si es horizontal o vertical. También es necesario usar la función setFrictionX() para que el jugador no se caiga de ella al estar encima.
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/250e61c0-0496-4762-a568-6d06283c02dd)
+
