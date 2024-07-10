@@ -15,6 +15,11 @@ Algunas desventajas que tiene son que exportar los juegos a consola es más comp
 
 La interfaz tiene en el centro un layout que representa una pantalla del juego (menú, nivel, etc) y donde añadiremos los objetos que necesitemos para el juego. Por otro lado está el Event sheet donde desarrollaremos la lógica del juego mediante eventos. A la derecha tenemos el directorio del proyecto con todos sus subdirectorios, además de los objetos, sonidos, fuentes y otros recursos que utilizamos. A la izquierda tenemos el editor de propiedades del elemento que tengamos seleccionado o del propio layout en el caso de que no tengamos nada seleccionado.
 
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/2c79c1a8-7413-4ea7-a375-c85cdc495c68)
+
+![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/7b823ea6-d71c-45ea-a068-a3ba9a083f47)
+
+
 __·7/7/2024__
 
 ### Puliendo/terminando el juego
@@ -109,3 +114,7 @@ Para la gestión del jugador (movimientos, colisiones, etc) se crea una clase nu
 Para que el jugador aparezca en el sitio donde lo hayamos puesto en el Tiled debemos hacer lo siguiente a la hora de crearlo:
 
 ![image](https://github.com/Alex87777777/Carrera-OpenWebinars/assets/160547234/ebc0ca73-5f95-41ce-a7bb-e52f7fe0d3f5)
+
+__·10/7/2024__
+
+Para crear plataformas móviles en nuestro juego, tenemos que crear una clase para ellas que tenga una propiedad de escena, otra de velocidad y una booleana para saber si es horizontal o vertical
