@@ -130,6 +130,14 @@ Cuando cambiemos de escena es recomendable hacer un fadeOut para que la transici
 
 __·11/7/2024__
 
+Para añadir un icono a nuestro juego que se vea en la pestaña del navegador necesitamos añadir la siguiente línea de código al html principal:
+
+```html
+<link rel="icon" type="image/png" href="icono.png">
+```
+
 ### Gestión de niveles
 
 Para gestionar los niveles creamos una clase que se encargue de ello, y que tenga las propiedades nombre, vidas, puntuación, variables relacionadas con el mapa, jugador, enemigos, plataformas móviles, recolectables y sonidos. Además que podemos usar esta clase para no tener que crear clases para cada nivel.
+
+
