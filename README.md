@@ -132,4 +132,4 @@ __·11/7/2024__
 
 ### Gestión de niveles
 
-Para gestionar los niveles creamos una clase que se encargue de ello, y que tenga las propiedades nombre, vidas, puntuación, variables relacionadas con el mapa, jugador, enemigos, plataformas móviles, recolectables y sonidos.
+Para gestionar los niveles creamos una clase que se encargue de ello, y que tenga las propiedades nombre, vidas, puntuación, variables relacionadas con el mapa, jugador, enemigos, plataformas móviles, recolectables y sonidos. Además que podemos usar esta clase para no tener que crear clases para cada nivel.
