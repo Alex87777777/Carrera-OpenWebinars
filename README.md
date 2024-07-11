@@ -130,4 +130,6 @@ Cuando cambiemos de escena es recomendable hacer un fadeOut para que la transici
 
 __·11/7/2024__
 
-Para gestionar los niveles creamos una clase que se encargue de ello, y que tenga las propiedades nombre, vidas, puntuación, variables relacionadas con el mapa, jugador, enemigos, plataformas móviles, recolectables y sonidos. De esta manera no necesitamos una clase para cada nivel. 
+### Gestión de niveles
+
+Para gestionar los niveles creamos una clase que se encargue de ello, y que tenga las propiedades nombre, vidas, puntuación, variables relacionadas con el mapa, jugador, enemigos, plataformas móviles, recolectables y sonidos.
