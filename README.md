@@ -130,11 +130,13 @@ Cuando cambiemos de escena es recomendable hacer un fadeOut para que la transici
 
 __·11/7/2024__
 
-Para añadir un icono a nuestro juego que se vea en la pestaña del navegador necesitamos añadir la siguiente línea de código al html principal:
+Para añadir un icono y título a nuestro juego para que se visualice en la pestaña del navegador necesitamos añadir las siguientes líneas de código al html principal:
 
 ```html
+<title>Nombre del Juego</title>
 <link rel="icon" type="image/png" href="icono.png">
 ```
+Es importante que el icono sea de 16x16.
 
 ### Gestión de niveles
 
