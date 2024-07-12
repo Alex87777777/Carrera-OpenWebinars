@@ -183,3 +183,33 @@ grabaBD() {
 }
 ```
 Si queremos ver si se graban los datos correctamente, tenemos que hacer click derecho en el navegador, ir a inspeccionar, Application y Local Storage.
+
+### Terminando el juego
+
+En el archivo de configuración quitamos el ancho y alto que habiamos establecido anteriormente y lo sustituimos por el siguiente código:
+
+```typescript
+scale: {
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.CENTER_BOTH,
+    width: 854,
+    height: 480
+},
+```
+De esta manera hacemos que el juego sea web responsive.
+
+Para habilitar controles táctiles en nuestro juego debemos comprobar en el método create de la clase hud que el dispositivo de juego sea táctil:
+
+```typescript
+if(this.speechSynthesis.game.device.input.touch) {
+    this.crearControles();
+}
+
+crearControles() {
+    this.InputDeviceInfo.addPointer(2); // Permite el uso tanto de táctil como de teclado 
+    this.controlIzda = this.add.sprite(350, 0, Constantes.CONTROL.IZQUIERDA).setInteractive();
+    this.controlDcha = this.add.sprite(350, 0, Constantes.CONTROL.DERECHA).setInteractive();
+    this.controlSalto = this.add.sprite(350, 0, Constantes.CONTROL.SALTO).setInteractive(); 
+    // Añadimos los sprites de los botones
+}
+```
