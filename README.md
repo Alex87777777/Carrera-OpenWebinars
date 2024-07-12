@@ -213,3 +213,4 @@ crearControles() {
     // Añadimos los sprites de los botones
 }
 ```
+Cuando hayamos acabado, ejecutamos en la consola del Visual "npm run build", que nos creará un archivo javascript comprimido, el cual podremos subir a la plataforma que queramos junto con el html y los assets. Además de itch.io, también podemos subir nuestro juego a otras plataformas como gamejolt.
