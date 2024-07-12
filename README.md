@@ -214,3 +214,9 @@ crearControles() {
 }
 ```
 Cuando hayamos acabado, ejecutamos en la consola del Visual "npm run build", que nos creará un archivo javascript comprimido, el cual podremos subir a la plataforma que queramos junto con el html y los assets. Además de itch.io, también podemos subir nuestro juego a otras plataformas como gamejolt.
+
+### Conversión a app de Android
+
+Necesitamos tener instalado jdk 1.8, la última versión completa de gradle, android studio y cordova (este último se puede instalar a través de la consola mediante npm install -g cordova). 
+
+Una vez que tengamos la APK debemos firmarlo con Android Studio para generar el ABB, que podemos publicar en Google Play. Para acceder a la consola de google Play debemos crear una cuenta de desarrollador que cuesta 25$.
