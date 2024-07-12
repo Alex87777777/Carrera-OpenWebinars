@@ -182,3 +182,4 @@ grabaBD() {
         localStorage.setItem(Constantes.BASEDATOS.NOMBRE, JSON.stringify(this.datos));
 }
 ```
+Si queremos ver si se graban los datos correctamente, tenemos que hacer click derecho en el navegador, ir a inspeccionar, Application y Local Storage.
