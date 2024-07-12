@@ -169,7 +169,13 @@ creaBD() {
     }
 }
 ```
-Esto hace que si no tenemos una base de datos, se cree una con los ajustes por defecto. Luego debemos guardar la base de datos cada vez que se cambia un ajuste o las puntuaciones. Para ellos necesitamos una función dentro de la clase gestorBD:
+Esto hace que si no tenemos una base de datos, se cree una con los ajustes por defecto. Cuando necesitemos cambiar uno de los ajustes o puntuación, debemos crear una base de datos en la clase que necesitemos parra luego cambiar sus datos, por ejemplo si queremos desactivar la música haríamos:
+
+```typescript
+mibd.datos.musica = !mibd.datos.musica;
+```
+
+Luego debemos guardar la base de datos. Para ellos necesitamos una función dentro de la clase gestorBD:
 
 ```typescript
 grabaBD() {
