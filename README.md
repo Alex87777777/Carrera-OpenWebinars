@@ -142,4 +142,30 @@ Es importante que el icono sea de 16x16.
 
 Para gestionar los niveles creamos una clase que se encargue de ello, y que tenga las propiedades nombre, vidas, puntuación, variables relacionadas con el mapa, jugador, enemigos, plataformas móviles, recolectables y sonidos. Además que podemos usar esta clase para no tener que crear clases para cada nivel.
 
+__·12/7/2024__
 
+### Guardado de datos
+
+Para el guardado y cargado de datos tenemos que crear una clase llamada gestorBD que tenga en el constructor el siguiente código:
+
+```typescript
+if(JSON.parse(localStorage.getItem(Constantes.BASEDATOS.NOMBRE))) {
+    this.datos = JSON.parse(localStorage.getItem(Constantes.BASEDATOS.NOMBRE));
+} else {
+    this.creaBD();
+}
+
+creaBD() {
+    let bdinicial = {
+        msuica: true,
+        efectos: true,
+        puntuaciones : {
+            nivel1: 0,
+            nivel2: 0,
+            nivel3: 0
+        }
+        this.datos = bdinicial;
+        localStorage.setItem(Constantes.BASEDATOS.NOMBRE, JSON.stringify(this.datos));
+    }
+}
+```
