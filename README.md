@@ -169,3 +169,10 @@ creaBD() {
     }
 }
 ```
+Esto hace que si no tenemos una base de datos, se cree una con los ajustes por defecto. Luego debemos guardar la base de datos cada vez que se cambia un ajuste o las puntuaciones. Para ellos necesitamos una función dentro de la clase gestorBD:
+
+```typescript
+grabaBD() {
+        localStorage.setItem(Constantes.BASEDATOS.NOMBRE, JSON.stringify(this.datos));
+}
+```
