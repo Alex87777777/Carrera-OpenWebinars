@@ -228,3 +228,34 @@ __·13/7/2024__
 ### Introducción
 
 C# es un lenguaje de programación orientado a objetos desarrollado por Microsoft para la plataforma .NET. Su sintaxis deriva de C y C++ y tiene un modelo de objetos similar al de Java.
+
+### Particularidades con C#
+
+En C# existe "<T>", que es un marcador de posición para un tipo de dato que está sin especificar, que se usa en la programación genérica. Por ejemplo podemos crear una clase genérica que nos permite que el tipo de dato se defina al crear una instancia:
+
+```csharp
+public class MyGenericClass<T>
+{
+    private T genericField;
+
+    public MyGenericClass(T value)
+    {
+        genericField = value;
+    }
+
+    public T GetGenericValue()
+    {
+        return genericField;
+    }
+}
+```
+Esto nos permitiría hacer lo siguiente:
+
+```csharp
+var intInstance = new MyGenericClass<int>(10);
+Console.WriteLine(intInstance.GetGenericValue()); 
+
+var stringInstance = new MyGenericClass<string>("Hello");
+Console.WriteLine(stringInstance.GetGenericValue()); 
+```
+Los tipos genéricos son útiles para escribir código más flexible y reutilizable.
