@@ -220,3 +220,11 @@ Cuando hayamos acabado, ejecutamos en la consola del Visual "npm run build", que
 Necesitamos tener instalado jdk 1.8, la última versión completa de gradle, android studio y cordova (este último se puede instalar a través de la consola mediante npm install -g cordova). 
 
 Una vez que tengamos la APK debemos firmarlo con Android Studio para generar el ABB, que podemos publicar en Google Play. Para acceder a la consola de google Play debemos crear una cuenta de desarrollador que cuesta 25$.
+
+__·13/7/2024__
+
+## Curso de C#
+
+### Introducción
+
+C# es un lenguaje de programación orientado a objetos desarrollado por Microsoft para la plataforma .NET. Su sintaxis deriva de C y C++ y tiene un modelo de objetos similar al de Java.
