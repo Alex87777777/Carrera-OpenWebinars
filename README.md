@@ -271,3 +271,23 @@ Stack es una estructura de datos que sigue el principio LIFO (Last In, First Out
 ·Count: Indica cuantos elementos tiene la pila
 
 Por otra parte tenemos "Queue" que funciona al revés que la pila, con las funciones "enqueue" y "dequeue".
+
+__·14/7/2024__
+
+Linq nos ofrece métodos de extensión para listas que nos pueden ser muy útiles para algunas tareas.
+
+·Where: Devuelve los elementos de una lista que cumplan cierta condición.
+```csharp
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+var evenNumbers = numbers.Where(n => n % 2 == 0);
+```
+
+·SelectMany: Se usa para unir varias colecciones en una sola.
+```csharp
+var lists = new List<List<int>> {
+    new List<int> { 1, 2, 3 },
+    new List<int> { 4, 5 },
+    new List<int> { 6, 7, 8, 9 }
+};
+var allNumbers = lists.SelectMany(l => l);
+```
