@@ -263,8 +263,11 @@ Los tipos genéricos son útiles para escribir código más flexible y reutiliza
 Stack es una estructura de datos que sigue el principio LIFO (Last In, First Out) lo que significa que el último elemento que se inserta es el primero en retirarse. Se usa principalmente para procesar colecciones en orden inverso y cuenta con las siguientes funciones:
 
 ·Push: Inserta un elemento a la pila
+
 ·Pop: Devuelve y retira el último elemento que se insertó
+
 ·Peek: Igual que el anterior, pero sin retirarlo
+
 ·Count: Indica cuantos elementos tiene la pila
 
 Por otra parte tenemos "Queue" que funciona al revés que la pila, con las funciones "enqueue" y "dequeue".
