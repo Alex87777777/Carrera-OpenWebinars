@@ -376,3 +376,13 @@ var people = new List<(int Id, string Name)>
 };
 var peopleDict = people.ToDictionary(p => p.Id, p => p.Name);
 ```
+
+Para ejecutar procesos en segundo plano, existe una alternativa a la clase Thread, que es el uso de _async_ y _await_. 
+Async sirve para marcar métodos que queramos que sean asíncronos, los cuales deben devolver void, Task o Task<T>. Por otra parte await se usa dentro de un método asíncrono para esperar una tarea sin bloquear el hilo actual.
+```csharp
+private async static void DownloadSongAsync()
+{
+    DownloadService ds = new DownloadService();
+    byte[] futureSong = await ds.DownloadAsync("cancion");
+}
+```
