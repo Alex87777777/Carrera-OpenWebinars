@@ -291,3 +291,88 @@ var lists = new List<List<int>> {
 };
 var allNumbers = lists.SelectMany(l => l);
 ```
+
+·Any: Devuelve true si por lo menos un elemento de la colección cumple con la condición.
+```csharp
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+bool hasEvenNumbers = numbers.Any(n => n % 2 == 0);
+```
+
+·Select: Se usa para convertir cada elemento de la colección a una nueva forma o tipo.
+```csharp
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+var squaredNumbers = numbers.Select(n => n * n);
+```
+
+·First y FirstOrDefault: Devuelven el primer elemento de la colección que cumpla con una condición. Si no encuentra ninguno, First devuelve excepción mientras que FirstOrDefault devuelve null.
+```csharp
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+var firstEvenNumber = numbers.First(n => n % 2 == 0);
+```
+
+·Last y LastOrDefault: Funciona igual que el anterior pero en vez de ser el primer elemento, es el último.
+
+·Take: Devuelve los primeros n elementos de una colección.
+```csharp
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+var firstThreeNumbers = numbers.Take(3);
+```
+
+·Skip: Salta los primeros n elementos de una colección.
+```csharp
+var numbers = new List<int> { 1, 2, 3, 4, 5 };
+var allButFirstTwoNumbers = numbers.Skip(2);
+```
+
+·OrderBy y OrderByDescending: Ordena una colección en función de un criterio.
+```csharp
+var numbers = new List<int> { 5, 3, 1, 4, 2 };
+var orderedNumbers = numbers.OrderBy(n => n);
+
+// Usando OrderBy la lista quedaría así {1,2,3,4,5}, en cambio con OrderByDescending quedaría así {5,4,3,2,1}
+```
+
+·GroupBy: Crea agrupaciones de elementos basadas en una clave común.
+```csharp
+var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
+var groupedNumbers = numbers.GroupBy(n => n % 2);
+// groupedNumbers crea dos grupos: uno con los números pares y otro con los impares
+foreach (var group in groupedNumbers)
+{
+    Console.WriteLine($"Key: {group.Key}");
+    foreach (var number in group)
+    {
+        Console.WriteLine(number);
+    }
+}
+// Salida:
+// Key: 1
+// 1, 3, 5
+// Key: 0
+// 2, 4, 6
+```
+
+·OfType: Obtiene los elementos de un tipo específico de una colección que pueda contener varios.
+```csharp
+var mixedList = new List<object> { 1, "two", 3, "four", 5 };
+var intList = mixedList.OfType<int>();
+// intList contiene solo los enteros de la lista
+```
+
+·ToList y ToArray: Convierten una colección de tipo IEnumerable en una lista y array respectivamente.
+```csharp
+var numbers = new int[] { 1, 2, 3, 4, 5 };
+var numbersList = numbers.ToList();
+var numbersArray = numbers.ToArray();
+```
+
+·ToDictionary: Convierte una colección a un Diccionario usando una clave y un valor.
+```csharp
+var people = new List<(int Id, string Name)>
+{
+    (1, "Alice"),
+    (2, "Bob"),
+    (3, "Charlie")
+};
+var peopleDict = people.ToDictionary(p => p.Id, p => p.Name);
+```
