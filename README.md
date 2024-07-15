@@ -387,3 +387,29 @@ private async static void DownloadSongAsync()
 }
 ```
 
+__·15/7/2024__
+
+### Introducción a WPF y XAML
+
+XAML es un lenguaje de marcado utilizado principalmente en .NET para definir interfaces de usuario.
+Por otra parte WPF es una tecnología usada para el desarrollo de aplicaciones de escritorio, que utiliza XAML para definir las interfaces.
+Si ponemos un botón en la interfaz gráfica, por ejemplo, en nuestro archivo XAML tendríamos un código similar al siguiente:
+```xaml
+<Window x:Class="WpfApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Button Content="Click Me" Width="100" Height="50" Click="Button_Click"/>
+    </Grid>
+</Window>
+```
+
+Algunos controles básicos de XAML son los siguientes:
+
+·Grid: Es similar a una tabla de html
+
+·Grid.RowDefinitions: Representa una fila de la tabla.
+
+·Grid.ColumnDefinitions: Representa una columna de la tabla.
+
