@@ -407,9 +407,25 @@ Si ponemos un botón en la interfaz gráfica, por ejemplo, en nuestro archivo XA
 
 Algunos controles básicos de XAML son los siguientes:
 
-·Grid: Es similar a una tabla de html
+·Grid
 
-·Grid.RowDefinitions: Representa una fila de la tabla.
+·Grid.RowDefinitions
 
-·Grid.ColumnDefinitions: Representa una columna de la tabla.
+·Grid.ColumnDefinitions
 
+·StackPanel
+
+·Button
+
+·Label
+
+·TextBox
+
+·Image
+
+Si queremos acceder a un control que hayamos creado desde el código principal, no podremos hacerlo porque los controles por defecto no tienen nombre, por lo que deberemos usar la propiedad x:Name o cambiarlo desde las propiedades. Para establecer un veneto para un control también podemos hacerlo desde la ventana de propiedades.
+```xaml
+ <Button x:Name="boton1" Content="Click Me" Width="100" Height="50" Click="boton1_Click"/>
+```
+
+Tenemos otros controles como ListBox
