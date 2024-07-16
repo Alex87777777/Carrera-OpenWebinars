@@ -528,3 +528,5 @@ CustomDependencyService.Get<LoginService>().DoLogin(UserName, PassWord);
 Los frameworks de MVVM más usados son Prism, MVVMLight, MVVMCross y ReactiveUI. Para agregar ReactiveUI a nuestro proyecto WPF, debemos agregar la libreria Nuget del mismo.
 
 Cuando marcamos un objeto con la clase ReactiveObject, pasa ser reactivo y a tener propiedades similares a las que implementamos con el BaseViewModel.
+
+### Trabajando con datos
