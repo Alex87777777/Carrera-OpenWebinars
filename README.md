@@ -405,7 +405,7 @@ Si ponemos un botón en la interfaz gráfica, por ejemplo, en nuestro archivo XA
 </Window>
 ```
 
-Algunos controles básicos de XAML son los siguientes:
+Algunos controles de XAML son los siguientes:
 
 ·Grid
 
@@ -423,9 +423,34 @@ Algunos controles básicos de XAML son los siguientes:
 
 ·Image
 
+·ListBox
+
 Si queremos acceder a un control que hayamos creado desde el código principal, no podremos hacerlo porque los controles por defecto no tienen nombre, por lo que deberemos usar la propiedad x:Name o cambiarlo desde las propiedades. Para establecer un veneto para un control también podemos hacerlo desde la ventana de propiedades.
 ```xaml
  <Button x:Name="boton1" Content="Click Me" Width="100" Height="50" Click="boton1_Click"/>
 ```
 
-Tenemos otros controles como ListBox
+__·16/7/2024__
+
+También podemos crear controles personalizados como en Windows Forms. Para ello debemos crear un archivo User Control (WPF) y dentro del Grid podemos poner los componentes que queramos añadir.
+
+Para añadir estilos, tenemos que dirigirnos a app.xaml y dentro de la etiqueta Application.Resources estableceriamos todo.
+Si queremos crear un color por ejemplo debemos escribir el siguiente código:
+```xaml
+<Color x:Key="ColorPrimary">#000000</Color>
+```
+
+Podemos crear estilos que estén destinados a diferentes componentes. Si queremos crear un estilo para botones haríamos lo siguiente:
+```xaml
+<Style TargetType="Button x:Key="ButtonMain">
+    <Setter Property="Background" Value="Aquamarine"/>
+    <Setter Property="FontSize" Value=15/>
+</Style>
+```
+
+Ese estilo hará que los botones que lo usen tengan el color de fondo Aquamarine y el texto tendrá de tamaño 15.
+Luego para ponerle a un botón ese estilo sería tan sencillo como:
+```xaml
+ <Button x:Name="boton1" Content="Click Me" Width="100" Height="50" Click="boton1_Click" Style="{StaticResource ButtonMain}"/>
+```
+```
