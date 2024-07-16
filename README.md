@@ -530,3 +530,17 @@ Los frameworks de MVVM más usados son Prism, MVVMLight, MVVMCross y ReactiveUI.
 Cuando marcamos un objeto con la clase ReactiveObject, pasa ser reactivo y a tener propiedades similares a las que implementamos con el BaseViewModel.
 
 ### Trabajando con datos
+
+Para serializar un objeto a JSON hacemos lo siguiente:
+```csharp
+Actor actor = new Actor();
+actor.Age = 20;
+actor.Name = "Pablo";
+
+string json = JsonConvert.SerializeObject(actor);
+```
+
+ADO.NET es un conjunto de librerias utilizado para trabajar con sistemas de datos que cuenta con un conjunto de objetos útiles para las bases de datos, como Connection, Command o Transaction.
+
+Es recomendable ir a las propiedades de nuestro proyecto y a settings, para crear un archivo de configuración. Dentro de este fichero podemos crear por ejemplo un color, a partir de un nombre, un tipo (System.Drawing.Color en este caso), un scope y un valor por defecto.
+Luego si queremos acceder a este color desde nuestro código sería tan sencillo como escribir Properties.Settings.Default.NombreDelSetting; . Esta setting puede ser editada en el código si le igualamos un color diferente, y para guardar las settings basta con hacer Properties.Settings.Default.Save(); .
