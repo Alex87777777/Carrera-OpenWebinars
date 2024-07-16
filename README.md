@@ -432,7 +432,7 @@ Si queremos acceder a un control que hayamos creado desde el código principal, 
 
 __·16/7/2024__
 
-También podemos crear controles personalizados como en Windows Forms. Para ello debemos crear un archivo User Control (WPF) y dentro del Grid podemos poner los componentes que queramos añadir.
+También podemos crear controles personalizados como en Windows Forms. Para ello debemos crear un archivo User Control (WPF) y dentro del Grid podemos añadir los componentes que queramos.
 
 Para añadir estilos, tenemos que dirigirnos a app.xaml y dentro de la etiqueta Application.Resources estableceriamos todo.
 Si queremos crear un color por ejemplo debemos escribir el siguiente código:
@@ -453,4 +453,35 @@ Luego para ponerle a un botón ese estilo sería tan sencillo como:
 ```xaml
  <Button x:Name="boton1" Content="Click Me" Width="100" Height="50" Click="boton1_Click" Style="{StaticResource ButtonMain}"/>
 ```
+
+Para añadir animaciones a un botón podemos hacerlo dentro de un evento, por ejemplo cuando hagamos click en el botón.
+```xaml
+DoubleAnimation doubleAnimation = new DoubleAnimation();
+doubleAnimatipn.From = 1;
+doubleAnimation.To = 0;
+
+button1.BeginAnimation(Button.OpacityProperty, doubleAnimation);
 ```
+
+De esta manera el botón al ser clickado hará un efecto de fade.
+
+### Introducción a MVVM
+
+MVVM es un patrón de arquitectura de software similar al modelo vista controlador diseñado para desacoplar código.
+
+Para usarlo, empezamos creando un proyecto con 4 carpetas: Model, ViewModel, View y Services.
+Dentro de VIewModel creamos una carpeta llamada Base y dentro creamos una clase abstracta llamada BaseViewModel que implemente la interfaz INotifyPropertyChanged. Dentro de la clase haremos lo siguiente:
+```csharp
+public event PropertyChangedEventHandler PropertyChanged;
+
+public void RaiseProperty([CallerMemberName] string propertyName= "")
+{
+    PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+}
+```
+
+Dentro de view creamos un archivo Window (WPF) que va a ser la pantalla del login y en app.xaml cambiamos la StartupUri al path de este último archivo que creamos. En viewmodel creamos una clase que herede de BaseViewModel y que será el modelo de la pantalla de login. Que tenga las propiedades que necesite esta pantalla (por ejemplo username y password) y en los setters llamamos a RaiseProperty. Dentro del LoginView en los textblocks le añadimos la propiedad Text="{Binding UserName}" en el caso de username. Dentro de la carpeta Base creamos una clase genérica Command que implemente de ICommand y en LoginViewModel creamos un objeto command. Luego en el botón de submit podemos añadirle la propiedad de Command de esta manera:
+```xaml
+<Button Content="Login" COmmand="{Binding DoLOginCommand}"/>
+```
+
