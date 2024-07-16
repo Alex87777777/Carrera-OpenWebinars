@@ -485,3 +485,46 @@ Dentro de view creamos un archivo Window (WPF) que va a ser la pantalla del logi
 <Button Content="Login" COmmand="{Binding DoLOginCommand}"/>
 ```
 
+En la carpeta de modelos creamos una clase UserData y en services una clase LoginService que tendrá un método para hacer el Login y que devuelva un nuevo UserData.
+
+Para poder implementar los servicios creamos una interfaz en la carpeta services que será usada por nuestros servicios. Tenemos que crear un servicio de dependencia (clase estática) que tenga un diccionario de instancias y dos métodos: register y get (con parámetro Type). En register hacemos lo siguiente:
+```csharp
+var instance = Activator.Createlnstance(type)
+var implementationType = type.GetInterfaces().FirstOrDefault();
+if(instances.Containskey (implementationType))
+{
+    instances[implementationType] = instance;
+}
+else
+{
+    instances.Add(implementationType, instance);
+}
+```
+
+Y en el Get:
+```csharp
+var implementation = type.GetInterfaces().FirstOrDefault();
+
+if(instances.Containskey(implementation))
+{
+    return instances[implementation];
+}
+else
+{
+    return null;
+}
+```
+
+Ahora en el constructor de app escribimos:
+```csharp
+CustomDependencyService.Register<LoginService>();
+```
+
+Escribimos también en la función que se ejecute cuando se haga el LoginComand lo siguiente:
+```csharp
+CustomDependencyService.Get<LoginService>().DoLogin(UserName, PassWord);
+```
+
+Los frameworks de MVVM más usados son Prism, MVVMLight, MVVMCross y ReactiveUI. Para agregar ReactiveUI a nuestro proyecto WPF, debemos agregar la libreria Nuget del mismo.
+
+Cuando marcamos un objeto con la clase ReactiveObject, pasa ser reactivo y a tener propiedades similares a las que implementamos con el BaseViewModel.
