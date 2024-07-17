@@ -572,3 +572,4 @@ Y podemos exportar nuestros proyectos a más de 30 plataformas entre las que est
 ·PC
 
 Por otra parte hay plataformas que ya no lo soportan como PS3 o Xbox 360.
+Unity Hub es una aplicación que nos sirve para gestionar nuestra cuenta y licencia, proyectos y instalaciones del editor.
