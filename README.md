@@ -544,3 +544,31 @@ ADO.NET es un conjunto de librerias utilizado para trabajar con sistemas de dato
 
 Es recomendable ir a las propiedades de nuestro proyecto y a settings, para crear un archivo de configuración. Dentro de este fichero podemos crear por ejemplo un color, a partir de un nombre, un tipo (System.Drawing.Color en este caso), un scope y un valor por defecto.
 Luego si queremos acceder a este color desde nuestro código sería tan sencillo como escribir Properties.Settings.Default.NombreDelSetting; . Esta setting puede ser editada en el código si le igualamos un color diferente, y para guardar las settings basta con hacer Properties.Settings.Default.Save(); .
+
+## Curso de Unity
+
+Unity es una herramienta de desarrollo de videojuegos que utiliza C# y que proporciona un editor, un motor, librerias, servicios, herramientas de audio, animación, un render, etc. Permite la exportación de nuestro juego a una cantidad muy amplia de plataformas y cuenta con una de las documentaciones más completas. También tiene una comunidad muy grande y colaboradora lo que nos puede ayudar a aprender cosas nuevas.
+
+Podemos ejecutar el editor de Unity en las siguientes plataformas:
+
+·Windows 7 o más
+
+·Mac OS 10.12 o más
+
+·Linux (experimental)
+
+Y podemos exportar nuestros proyectos a más de 30 plataformas entre las que están:
+
+·Web
+
+·Móviles
+
+·Consolas
+
+·VR
+
+·TV
+
+·PC
+
+Por otra parte hay plataformas que ya no lo soportan como PS3 o Xbox 360.
