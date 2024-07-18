@@ -584,6 +584,6 @@ La interfaz de Unity es así:
 
 Y esta formada por los siguientes elementos:
 
-·Hierarchy View: Vista que contiene los objetos de nuestro proyecto que sigue una relación de padre-hijo
+·Hierarchy View: Vista que contiene los objetos de nuestro proyecto que sigue una relación de padre-hijo.
 
-·Vista de escena: Panel en el que podemos ver todos los objetos de la escena con la que estemos trabajando. Nos permite ver la escena desde diferentes perspectivas, movernos por ella, rotar y mover objetos.
+·Vista de escena: Panel en el que podemos ver todos los objetos de la escena con la que estemos trabajando. Nos permite ver la escena desde diferentes perspectivas, movernos por ella, rotar y mover objetos. Podemos elegir diferentes modos de visualización: shaded, wireframe, shaded wireframe, alpha mode o overdraw entre otros. También se puede alternar entre vista 2D y 3D, activar o desactivar la iluminación y el audio, desactivar/activar diferentes aspectos como el skybox o la niebla, ver el número de elementos ocultos, mostrar/ocultar el panel de herramientas personalizadas, cambiar los ajustes de la cámara de la vista de escena y de la navegación por esta vista o cambiar los ajustes de los Gizmos. Por último, nos permite buscar en nuestra escena los objetos por sus nombres.
