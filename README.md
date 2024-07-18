@@ -547,6 +547,8 @@ Luego si queremos acceder a este color desde nuestro código sería tan sencillo
 
 ## Curso de Unity
 
+### Introducción
+
 Unity es una herramienta de desarrollo de videojuegos que utiliza C# y que proporciona un editor, un motor, librerias, servicios, herramientas de audio, animación, un render, etc. Permite la exportación de nuestro juego a una cantidad muy amplia de plataformas y cuenta con una de las documentaciones más completas. También tiene una comunidad muy grande y colaboradora lo que nos puede ayudar a aprender cosas nuevas.
 
 Podemos ejecutar el editor de Unity en las siguientes plataformas:
@@ -573,3 +575,15 @@ Y podemos exportar nuestros proyectos a más de 30 plataformas entre las que est
 
 Por otra parte hay plataformas que ya no lo soportan como PS3 o Xbox 360.
 Unity Hub es una aplicación que nos sirve para gestionar nuestra cuenta y licencia, proyectos y instalaciones del editor.
+
+### Interfaz
+
+La interfaz de Unity es así:
+
+![image](https://github.com/user-attachments/assets/7411fe30-f022-409d-aae7-b3ff62700f17)
+
+Y esta formada por los siguientes elementos:
+
+·Hierarchy View: Vista que contiene los objetos de nuestro proyecto que sigue una relación de padre-hijo
+
+·Vista de escena: Panel en el que podemos ver todos los objetos de la escena con la que estemos trabajando. Nos permite ver la escena desde diferentes perspectivas, movernos por ella, rotar y mover objetos.
