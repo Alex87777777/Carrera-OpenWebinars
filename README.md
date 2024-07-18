@@ -545,6 +545,8 @@ ADO.NET es un conjunto de librerias utilizado para trabajar con sistemas de dato
 Es recomendable ir a las propiedades de nuestro proyecto y a settings, para crear un archivo de configuración. Dentro de este fichero podemos crear por ejemplo un color, a partir de un nombre, un tipo (System.Drawing.Color en este caso), un scope y un valor por defecto.
 Luego si queremos acceder a este color desde nuestro código sería tan sencillo como escribir Properties.Settings.Default.NombreDelSetting; . Esta setting puede ser editada en el código si le igualamos un color diferente, y para guardar las settings basta con hacer Properties.Settings.Default.Save(); .
 
+__·17/7/2024__
+
 ## Curso de Unity
 
 ### Introducción
@@ -576,6 +578,8 @@ Y podemos exportar nuestros proyectos a más de 30 plataformas entre las que est
 Por otra parte hay plataformas que ya no lo soportan como PS3 o Xbox 360.
 Unity Hub es una aplicación que nos sirve para gestionar nuestra cuenta y licencia, proyectos y instalaciones del editor.
 
+__·18/7/2024__
+
 ### Interfaz
 
 La interfaz de Unity es así:
@@ -586,8 +590,14 @@ Y esta formada por los siguientes elementos:
 
 ·Hierarchy View: Vista que contiene los objetos de nuestro proyecto que sigue una relación de padre-hijo.
 
-·Vista de escena: Panel en el que podemos ver todos los objetos de la escena con la que estemos trabajando. Nos permite ver la escena desde diferentes perspectivas y movernos por ella. Podemos elegir diferentes modos de visualización: shaded, wireframe, shaded wireframe, alpha mode o overdraw entre otros. También se puede alternar entre vista 2D y 3D, activar o desactivar la iluminación y el audio, desactivar/activar diferentes aspectos como el skybox o la niebla, ver el número de elementos ocultos, mostrar/ocultar el panel de herramientas personalizadas, cambiar los ajustes de la cámara de la vista de escena y de la navegación por esta vista o cambiar los ajustes de los Gizmos. Por último, nos permite buscar en nuestra escena los objetos por sus nombres.
+·Scene View: Panel en el que podemos ver todos los objetos de la escena con la que estemos trabajando. Nos permite ver la escena desde diferentes perspectivas y movernos por ella. Podemos elegir diferentes modos de visualización: shaded, wireframe, shaded wireframe, alpha mode o overdraw entre otros. También se puede alternar entre vista 2D y 3D, activar o desactivar la iluminación y el audio, desactivar/activar diferentes aspectos como el skybox o la niebla, ver el número de elementos ocultos, mostrar/ocultar el panel de herramientas personalizadas, cambiar los ajustes de la cámara de la vista de escena y de la navegación por esta vista o cambiar los ajustes de los Gizmos. Por último, nos permite buscar en nuestra escena los objetos por sus nombres.
 
 ·Herramientas: Tenemos varias herramientas de transformación que sirven para mover objetos, rotarlos, cambiar sus tamaños en diferentes ejes entre otras funcionalidades. Otras nos sirven para cambiar el pivot de un objeto, ejecutar el juego, pararlo sin detenerlo para poder avanzar frame a frame, colaborar con otras personas, agregar servicios al proyecto, gestionar nuestra cuenta de Unity, gestionar las capas (layers) del juego, cambiar la disposición de la interfaz, etc. También podemos crear herramientos propias.
 
-·Game View: Vista que nos muestra el render de la cámara de nuestro juego
+·Game View: Vista que nos muestra el render de la cámara de nuestro juego. Nos permite cambiar el aspect ratio del juego, cambiar la escala de la ventana del juego, activar que se maximice la pantalla de juego al ejecutarlo, activar/desactivar el audio al ejecutar el juego, forzar el uso de VSync o activar las stats del juego.
+
+·Project View: Vista donde tenemos todos los recursos de nuestro proyecto (modelos, texturas, animaciones, scripts, etc).
+
+·Inspector: Su contenido varía dependiendo de que tengamos seleccionado. Si seleccionamos un objeto por ejemplo, podremos cambiar sus propiedades como su posición, la capa en la que está, icono con el que es representado o nombre entre otras muchas.
+
+·Consola:
