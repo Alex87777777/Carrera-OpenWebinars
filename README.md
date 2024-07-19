@@ -600,4 +600,16 @@ Y esta formada por los siguientes elementos:
 
 ·Inspector: Su contenido varía dependiendo de que tengamos seleccionado. Si seleccionamos un objeto por ejemplo, podremos cambiar sus propiedades como su posición, la capa en la que está, icono con el que es representado o nombre entre otras muchas.
 
-·Consola:
+·Consola: Herramienta que nos sirve para mostrar mensajes de Log (Información, Warnings y errores), para debugging y varias funcionalidades relacionadas con la depuración y optimización del juego.
+
+__·19/7/2024__
+
+·Menús: En la parte superior tenemos varios menús, que son File, Edit, Assets, GameObject, Component, WIndow y Help.
+
+·Preferencias: Menú situado dentro de Edit, en el que podemos configurar las preferencias de Unity.
+
+·Project Settings: Nos permite modificar opciones del audio, físicas, editor, gráficos, etc de nuestro proyecto.
+
+·Package manager: Menú situado dentro de Window que nos permite gestionar los paquetes que tenemos instalados en nuestro proyecto o instalar nuevos.
+
+·Shortcuts: Menú situado dentro de Edit que nos permite cambiar los atajos de teclado para diferentes comandos y crear difrentes perfiles por si en el proyecto están trabajando más personas.
