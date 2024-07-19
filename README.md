@@ -613,3 +613,17 @@ __·19/7/2024__
 ·Package manager: Menú situado dentro de Window que nos permite gestionar los paquetes que tenemos instalados en nuestro proyecto o instalar nuevos.
 
 ·Shortcuts: Menú situado dentro de Edit que nos permite cambiar los atajos de teclado para diferentes comandos y crear difrentes perfiles por si en el proyecto están trabajando más personas.
+
+### Conceptos esenciales
+
+Los GameObjects son contenedores de componentes que establecen como van a funcionar estos objetos. Por ejemplo un cubo está formado por un componente Transform, otro llamado Mesh Filter, otro Mesh Renderer y el Box Collider. Estos componentes varían depedniendo del objeto, pero siempre van a tener el Transform.
+
+Podemos usar Tags para etiquetar objetos y diferenciar clases dentro de nuestro código.
+
+Las Layers sirven para agrupar objetos por categorías lo que nos ayuda a seleccionar a qué capas afectan ciertas operaciones. Desde el apartado de Physics de Project Settings podemos establecer que capas pueden interactuar con cuales.
+
+Las escenas contienen el entorno y elementos del juego (equivalente a niveles). Se usan para niveles del juego, pantallas de menú, de ajustes, etc.
+
+### Asset Store
+
+Es una tienda de Unity cuya página ofrece una variedad de recursos, ya sea código, animaciones, modelos, texturas, herramientas, audios, entre otros muchos. También cuenta con paquetes gratuitos.
