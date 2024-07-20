@@ -627,3 +627,11 @@ Las escenas contienen el entorno y elementos del juego (equivalente a niveles). 
 ### Asset Store
 
 Es una tienda de Unity cuya página ofrece una variedad de recursos, ya sea código, animaciones, modelos, texturas, herramientas, audios, entre otros muchos. También cuenta con paquetes gratuitos.
+
+__·20/7/2024__
+
+### Prefabs
+
+Los prefabs nos permiten configurar objetos a partir de una plantilla, lo cual es muy útil para crear objetos similares que compartan las mismas características como powerups o enemigos. De esta manera si tenemos un objeto repetido varias veces y queremos modificar una propiedad, como cambiarle el tamaño, en vez de ir uno por uno podemos directamente cambiar el tamaño desde la plantilla.
+
+Podemos tener prefabs dentro de otros prefabs (prefabs anidados) y prefabs que sean variantes de otros prefabs.
