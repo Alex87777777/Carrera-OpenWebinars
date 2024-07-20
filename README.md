@@ -635,3 +635,7 @@ __·20/7/2024__
 Los prefabs nos permiten configurar objetos a partir de una plantilla, lo cual es muy útil para crear objetos similares que compartan las mismas características como powerups o enemigos. De esta manera si tenemos un objeto repetido varias veces y queremos modificar una propiedad, como cambiarle el tamaño, en vez de ir uno por uno podemos directamente cambiar el tamaño desde la plantilla.
 
 Podemos tener prefabs dentro de otros prefabs (prefabs anidados) y prefabs que sean variantes de otros prefabs.
+
+### Cache Server
+
+Es una herramienta de Unity que sirve para importar assets que ya han sido importados por otro usuario del proyecto o ahorrar tiempo cuando se cambia de plataforma. ESto es muy útil en el caso de que queramos cambiar la plataforma a la que está destinada nuestro juego.
