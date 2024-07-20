@@ -639,3 +639,4 @@ Podemos tener prefabs dentro de otros prefabs (prefabs anidados) y prefabs que s
 ### Cache Server
 
 Es una herramienta de Unity que sirve para importar assets que ya han sido importados por otro usuario del proyecto o ahorrar tiempo cuando se cambia de plataforma. ESto es muy útil en el caso de que queramos cambiar la plataforma a la que está destinada nuestro juego.
+
