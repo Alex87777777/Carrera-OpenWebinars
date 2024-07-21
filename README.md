@@ -654,3 +654,29 @@ transform.localRotation = Quaternion.Euler(0f, 45, 0f);
 ```
 
 También se usan otros métodos como LookRotation, Angle, Slerp, FromToRotation, identity, etc.
+
+### Ciclo de vida de un componente
+
+El ciclo de vida de un componente son las fases por las que pasa un componente desde que se crea hasta que se destruye, algunos de estos métodos son automáticos, y otros se ejecutan cuando nosotros queramos.
+
+·Awake: Este método forma parte del bloque de inicialización, es el primero que se ejecuta y siempre lo hace cuando se crea el objeto. Es similar a un constructor, por lo que se usa para inicializar valores de un componente o obtener referencias del propio objeto.
+
+·OnEnable: Se ejecuta siempre que el componente/objeto contenedor se activa, por lo que puede ejecutarse varias veces. Se usa comunmente para obtener referencias al igual que el awake y para asignar eventos y delegados.
+
+·Start: Se ejecuta en el primer frame en el que el componente está activo (solo una vez). No se ejecutará ningún método Start hasta que se ejecuten todos los Awake y OnEnable que tengamos.
+
+·OnDisable: Pertenece al bloque de decomisión al igual que OnDestroy (último bloque del ciclo de vida). Se ejecuta cuando se desactive el objeto o componente. Se usa para eliminar eventos y delegados creados en OnEnable
+
+·OnDestroy: Se ejecuta cuando haya terminado el ciclo de updates completo, por ejemplo al cerrar la escena o mediante "Object.Destroy". Es útil para limpiar recursos.
+
+·Update: Se utiliza para actualizar el estado del componente y pertenece al bloque de Game Logic. Dicta en gran medida cuales serán los FPS del juego ya que se ejecuta en cada frame. También se usa para actualizar posiciones y animaciones.
+
+·FixedUpdate: Pertenece al bloque de Physics, se ejecuta a una frecuencia fija (modificable en preferencias) y se puede ejecutar varias veces por frame. Se ejecuta antes de los cálculos de física por lo que si queremos modificar algo de la física debemos hacerlo en este método.
+
+·LateUpdate: En Unity no se conoce el orden de ejecución de los scripts, y además puede variar entre el editor y el ejecutable, por ejemplo si tenemos un juego con un script para una cámara que siga al jugador y otro para moverlo, pueden ejecutarse antes uno o el otro. Esto hace que si se ejecuta primero la cámara, puede dar la impresión de que la cámara no sigue al jugador correctamente, ya que tarda más. Por lo que LateUpdate es ideal para acciones que requieran que todos los objetos de la escena se hayan actualizado. Se ejecuta con la misma frecuencia que Update pero siempre después de todos los Update.
+
+.OnGUI: Sirve para crear herramientas o vistas en el juego. Se usan las clases GUI y GUILayout, para cambiar el color del GUI, añadir etiquetas, botones, etc. Se ejecuta en el bloque de GUI rendering y después del renderizado (por lo que se ejecutará por encima de todos los elementos).
+
+·OnDrawGizmos: Permite dibujar Gizmos (gráficos de información asociados al componente/objeto). Se usa para depurar de forma visual un componente. Con la clase Gizmos podemos cambiar el color del gizmo, y se usan los métodos DrawLine y Draw para dibujar el gizmo. 
+
+Se puede forzar que un script se ejecute antes que otro siempre en Project Settings -> Script Execution Order, aunque no es la forma correcta. Lo ideal es conocer el ciclo de vida de los componentes, lo que nos ahorrará tener problemas.
