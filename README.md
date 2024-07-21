@@ -640,3 +640,17 @@ Podemos tener prefabs dentro de otros prefabs (prefabs anidados) y prefabs que s
 
 Es una herramienta de Unity que sirve para importar assets que ya han sido importados por otro usuario del proyecto o ahorrar tiempo cuando se cambia de plataforma. ESto es muy útil en el caso de que queramos cambiar la plataforma a la que está destinada nuestro juego.
 
+__·21/7/2024__
+
+### Programación de componentes
+
+Para crear un componente debemos crear una clase que herede de MonoBehaviour (la cual hereda de Component). Y las variables que tengamos en la clase serán las propiedades del componente. Si queremos que una propiedad no se muestre en el inspector, debemos suar encima de esa variable la etiqueta [HideInInspector]. Las variables privadas tampoco se mostrarán a no ser que usemos encima la etiqueta [SerializeField]. Para que se muestren las estructuras debemos usar la etiqueta [System.Serializable].
+
+Los métodos más útiles de Transform son Translate, Rotate, GetChild(index), LookAt, SetParent...
+
+Para cambiar la rotación, en lugar de usar Vector3, como se hace con los otros dos valores, se usan cuaterniones (instrumento matemático para definir rotaciones).
+```csharp
+transform.localRotation = Quaternion.Euler(0f, 45, 0f);
+```
+
+También se usan otros métodos como LookRotation, Angle, Slerp, FromToRotation, identity, etc.
