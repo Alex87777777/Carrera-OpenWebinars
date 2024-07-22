@@ -681,8 +681,19 @@ El ciclo de vida de un componente son las fases por las que pasa un componente d
 
 Se puede forzar que un script se ejecute antes que otro siempre en Project Settings -> Script Execution Order, aunque no es la forma correcta. Lo ideal es conocer el ciclo de vida de los componentes, lo que nos ahorrará tener problemas.
 
+__·22/7/2024__
+
 ### Acceso a componentes
 
 La forma más simple de modificar un componente u objeto es mediante sus propiedades públicas. Para acceder a componentes que están en otros objetos podemos usar la opción FindObjectOfType o FindObjectsOfType.
 
 La función GetComponent() obtiene componentes del propio objeto mediante un nombre o un tipo. GetComponentInChildren busca un componente hacia abajo en la jerarquía. Por otra parte, tenemos GetComponentInParent que busca un componente en un objeto hacia arriba en la jerarquía (no tiene porque ser padre). Estas 3 funciones solo encontrarán 1 componente, por lo que si queremos que encuentre más, debemos usar GetComponents con una "s" al final.
+
+Usando AddComponent podemos añadir un componente de forma dinámica a un objeto
+
+### Introducción a la API de Unity
+
+La clase Debug tiene diferentes métodos relacionados con depuración, como print. También tiene Debug.Log, Debug.LogWarning, Debug.LogError para los mensajes en consola. Print y Debug.Log funcionan igual. Los métodos de Log tienen una variante añadiendo Format al final para agregar formato a la cadena. Usando Debug.Break podemos pausar el juego.
+
+La clase input se encarga de gestionar e informar sobre los métodos de entrada de nuestro juego, como teclado, ratón, pantalla táctil, giroscopio, acelerómetro, etc.
+Para acceder al teclado tenemos Input.GetKey, Input.GetKeyDown, Input.GetKeyUp. De parámetro podemos usar KeyCode.A si queremos 
