@@ -695,5 +695,12 @@ Usando AddComponent podemos añadir un componente de forma dinámica a un objeto
 
 La clase Debug tiene diferentes métodos relacionados con depuración, como print. También tiene Debug.Log, Debug.LogWarning, Debug.LogError para los mensajes en consola. Print y Debug.Log funcionan igual. Los métodos de Log tienen una variante añadiendo Format al final para agregar formato a la cadena. Usando Debug.Break podemos pausar el juego.
 
-La clase input se encarga de gestionar e informar sobre los métodos de entrada de nuestro juego, como teclado, ratón, pantalla táctil, giroscopio, acelerómetro, etc.
-Para acceder al teclado tenemos Input.GetKey, Input.GetKeyDown, Input.GetKeyUp. De parámetro podemos usar KeyCode.A si queremos 
+La clase Input se encarga de gestionar e informar sobre los métodos de entrada de nuestro juego, como teclado, ratón, pantalla táctil, giroscopio, acelerómetro, etc.
+Para acceder al teclado tenemos Input.GetKey, Input.GetKeyDown, Input.GetKeyUp. De parámetro podemos usar KeyCode.A si queremos obtener la información de esa tecla. 
+Input.GetButton y Input.GetAxis es igual que el GetKey pero se usa para botones/ejes virtuales respectivamente y toma como parámetro el nombre del botón o eje virtual.
+Input.GetMouseButtonDown y Input.GetMouseButtonUp y comprueban si un botón del ratón ha sido pulsado o soltado. Como parámetros toma 0 para el click primario, 1 para el secundario y 3 para el central. También tenemos Input.mousePosition para la posición del ratón.
+Unity tiene una herramienta llamada Unity Remote usada para el desarrollo de juegos para móvil. Input.touchCount devuelve el número de toques que se han dado en la pantalla del móvil y si usamos position en una isntancia de Touch obtendremos las coordenadas del toque en la pantalla. Usando phase en una instancia de Touch podremos saber la fase del toque (Began o Ended). Con el atributo acceleration de Input obtendremos los valores de la aceleración del dispositivo.
+
+La clase Screen nos va a dar información sobre la pantalla o ventana del juego. Nos da información como la resolución de la pantalla (Screen.currentResolution), rotación, si está en pantalla completa (Screen.fullScreen, que también sirve para alternar entre pantalla completa y ventana), las resoluciones soportadas, etc. Para saber los puntos por pulgada del monitor se usa Screen.DPI. Para cambiar la resolución usamos Screen.setResolution.
+
+La clase Camera nos permite consultar y manipular propiedades de las cámaras. Por ejemplo podemos acceder a la cámara principal con Camera.main. Dentro de nuestro juego tenemos 3 sistemas de coordenadas diferentes: World Space (coordenadas del espacio donde tenemos los objetos de nuestra escena, es el único sistema en 3D), Screen Space (coordenadas de la pantalla desde [0, 0] hasta [Screen.width, Screen.height] en píxeles) y Viewport Space (coordenadas de la pantalla desde [0, 0] hasta [1, 1]).
