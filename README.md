@@ -703,4 +703,21 @@ Unity tiene una herramienta llamada Unity Remote usada para el desarrollo de jue
 
 La clase Screen nos va a dar información sobre la pantalla o ventana del juego. Nos da información como la resolución de la pantalla (Screen.currentResolution), rotación, si está en pantalla completa (Screen.fullScreen, que también sirve para alternar entre pantalla completa y ventana), las resoluciones soportadas, etc. Para saber los puntos por pulgada del monitor se usa Screen.DPI. Para cambiar la resolución usamos Screen.setResolution.
 
-La clase Camera nos permite consultar y manipular propiedades de las cámaras. Por ejemplo podemos acceder a la cámara principal con Camera.main. Dentro de nuestro juego tenemos 3 sistemas de coordenadas diferentes: World Space (coordenadas del espacio donde tenemos los objetos de nuestra escena, es el único sistema en 3D), Screen Space (coordenadas de la pantalla desde [0, 0] hasta [Screen.width, Screen.height] en píxeles) y Viewport Space (coordenadas de la pantalla desde [0, 0] hasta [1, 1]).
+La clase Camera nos permite consultar y manipular propiedades de las cámaras. Por ejemplo podemos acceder a la cámara principal con Camera.main. Dentro de nuestro juego tenemos 3 sistemas de coordenadas diferentes: World Space (coordenadas del espacio donde tenemos los objetos de nuestra escena, es el único sistema en 3D), Screen Space (coordenadas de la pantalla desde [0, 0] hasta [Screen.width, Screen.height] en píxeles) y Viewport Space (coordenadas de la pantalla desde [0, 0] hasta [1, 1]). Esto nos sirve por ejemplo para mover un objeto en el mundo a donde pulsemos en la pantalla:
+```csharp
+Vector3 mousePosition = Input.mousePosition;
+mousePosition.z = 10f; //Eje z de las coordenadas
+transform.position = Camera.main.ScreenToWorldPoint(mousePosition); 
+// Convertimos las coordenadas de la pantalla a las del mundo
+```
+
+Esto también nos sirve para saber en que zona de la pantalla se pulsa, saber en que zona está en un objeto, calcular los límites del mundo según la pantalla, etc.
+
+Con la clase Time podemos saber el tiempo que ha transcurrido desde que se ejecuta el juego con Time.time, mientras que Time.unscaledTime devuelve el tiempo sin escala. Time.realtimeSinceStartup devuelve el tiempo desde arranque, Time.timeSinceLevelLoad, el tiempo desde carga del nivel y Time.deltaTime indica el tiempo desde el último renderizado, el cual nos permite hacer animaciones de una manera mucho más completa. Time.fixedDeltaTime hace lo mismo que el anterior pero con fixedUpdate (motor de física). Por último, tenemos timeScale que nos permite modificar la escala a la que transcurre el tiempo.
+
+Mediante transform.LookAt podemos modificar la rotación para mirar a un punto.
+
+En algunas situaciones vamos a necesitar activar/desactivar objetos o componentes, como por ejemplo si queremos desactivar una trampa una vez usada, un efecto de partículas, etc. Para hacer esto usamos la función de GameObject, setActive(bool). Al desactivar el objeto, los métodos Update, FixedUpdate y LateUpdate se dejarán de ejecutar y Start si está desactivado desde el inicio.
+
+Cuando no necesitemos más un objeto, debemos destruirlo mediante el método Destroy(object), que también funciona con componentes y se puede retrasar con un parámetro optativo.
+
