@@ -721,3 +721,86 @@ En algunas situaciones vamos a necesitar activar/desactivar objetos o componente
 
 Cuando no necesitemos más un objeto, debemos destruirlo mediante el método Destroy(object), que también funciona con componentes y se puede retrasar con un parámetro optativo.
 
+__·23/7/2024__
+
+### Co-rutinas
+
+En algunas ocasiones queremos retrasar una ejecución para destruir un objeto más tarde, por ejemplo. Esto es posible usando el método Invoke con el nombre del método que queramos retrasar y los segundos como parámetros. Podemos suar InvokeRepeating si queremos que se repita la ejecución cada x segundos. Usa los mismos parámetros que Invoke pero hay que añadirle un tercero que indica el tiempo entre repeticiones.
+
+Las co-rutinas son métodos que pueden detener su ejecución, devolver el control al programa y continuar donde se quedaron más adelante. Un ejemplo sería el siguiente:
+```csharp
+IEnumerator CounterCoroutine()
+{
+    counter = 0f;
+    while(counter < 1f)
+    {
+        counter += .1f;
+        Debug.Log("Valor del counter: " + counter);
+        yield return new WaitForSeconds(1f);
+    }
+}
+```
+
+En vez de usar el método Invoke para ejecutar la co-rutina, usamos StartCoroutine, que puede llevar como parámetro el nombre de la co-rutina o un IEnumerator (este último solo acepta un parámetro).
+```csharp
+void Update()
+{
+    if(flag)
+    {
+        StartCoroutine("MiPrimeraCorutinaConCadena", 2f);
+    }
+    else
+    {
+        StartCoroutine(MiPrimeraCorutinaSinCadena(2f));
+    }
+}
+```
+
+El yield return devuelve el valor de counter pero hace que cuando se vuelva a ejecutar la función, siga desde donde se quedó, por lo que counter seguirá teniendo el mismo valor que antes. WaitForSeconds hace que la función se vuelva a ejecutar cuando pase el tiempo del parámetro. La instrucción yield también se puede usar con break si no queremos devolver nada, pero con el return solo pdremos devolver expresiones como WaitForSeconds, WaitForFixedUpdate (espera hasta que se ejecute el FixedUpdate), WaitUntil (espera hasta que se cumpla una condición), WaitWhile (espera mientras se cumpla una condición), etc.
+
+Las co-rutinas deben devolver un IEnumerator y contener al menos una instrucción yield aunque no se use. Algunos métodos de Unity pueden ser co-rutinas, como Start.
+
+Podemos detener una co-rutina usando StopCoroutine, que acepta como parámetros uno de los siguientes: una cadena, un IEnumerator y una Coroutine. El método StopAllCoroutines detendrá todas las co-rutinas que estén en ejecución y asociadas al objeto.
+```csharp
+//Con cadena
+
+StartCoroutine("MyCoroutine");
+StopCoroutine("MyCoroutine");
+
+//Con IEnumerator
+
+private IEnumerator cr;
+cr = MyCoroutine();
+StartCoroutine(cr);
+StopCoroutine(cr);
+
+//Con Coroutine
+
+private Coroutine cr;
+cr = StartCoroutine(MyCoroutine());
+StopCoroutine(cr);
+```
+
+Las co-rutinas pueden esperar la finalización de otra si usamos "yield return StartCoroutine(IEnumerator)" y podemos hacer que se ejecuten en paralelo (en un mismo hilo).
+```csharp
+//Encadenar co-rutinas
+IEnumerator A(float t)
+{
+    Debug.Log("A, esperando " + t + " segundos...");
+    yield return StartCoroutine(B(t * 2));
+    Debug.Log("B ha terminado, continua A");
+    yield return new WaitForSeconds(t);
+    Debug.Log("A ha terminado");
+}
+
+IEnumerator B(float t)
+{
+    Debug.Log("B, esperando " + t + " segundos...");
+    yield return new WaitForSeconds(t);
+    Debug.Log("B ha terminado");
+}
+```
+
+```csharp
+
+```
