@@ -821,3 +821,32 @@ IEnumerator B(float t)
 }
 ```
 
+### Sistemas de coordenadas
+
+El sistema de coordenadas de Unity es el de coordenadas cartesianas, que están caracterizadas por tener como referencia una serie de ejes ortogonales que se cruzan en el origen. Es usado para posiciones de objetos, velocidades, fuerzas, direcciones, etc. Hay otros sistemas de coordenadas que podemos usar como el sistema de coordenadas polares en planos 2D, donde un punto se representa como distancia+ángulo. También existe el sistema de coordenadas UV (utilizado para texturas dentro de modelos).
+
+El pivote es el punto origen del sistema de referencia, que suele ser representado con la letra "O". En un espacio 3D el pivote sería {0, 0, 0}. Las transformaciones de un objeto se aplican sobre su pivote local.
+Las coordenadas globales es el sistema de referencia absoluto asociado al mundo. Todos los objetos comparten el mismo pivote. Por otra parte el sistema local está asociado al propio objeto (cada uno tiene uno propio).
+
+### Vectores
+
+En Unity usamos un punto para representar una localización en el espacio, mientras que un Vector equivale a un desplazamiento en el espacio. 
+Las operaciones entre vectores son muy sencillas:
+
+·Suma: new Vector2(vector1.x + vector2.x , vector1.y + vector2.y)
+
+·Resta: new Vector2(vector1.x - vector2.x , vector1.y - vector2.y)
+
+·Multiplicación por Escalar: new Vector2(vector1.x * valor , vector1.y * valor)
+
+·División por Escalar: new Vector2(vector1.x / valor , vector1.y / valor)
+
+La magnitud de un vector es la longitud de este, y para calcularlo se usa el teorema de Pitágoras de la siguiente forma: magnitud = raiz(x^2 + y^2).
+
+El producto escalar es una operación entre dos vectores que devuelve un número (escalar). Para calcularlo hay dos fórmulas, acontinuación se muestran las fórmulas para vectores de 2 dimensiones:
+
+·dot(A, B) = magnitudA * magnitudB * cos(ángulo entre los vectores)
+
+·dot(A, B) = (a.x * b.x) + (a.y b.y) 
+
+El resultado que obtengamos indica la relación entre los dos vectores. Si el resultado es 1, significa que los vectores son de la misma dirección y sentido, si es 0 significa que son perpendiculares y si es -1 son de misma dirección pero sentido opuesto. Esto se usa para determinar la visibilidad de un objeto o calcular la velocidad de un vehiculo relativamente a su dirección, entre otras funciones.
