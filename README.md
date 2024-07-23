@@ -802,5 +802,22 @@ IEnumerator B(float t)
 ```
 
 ```csharp
+//Ejecutar co-rutinas en paralelo
+IEnumerator A(float t)
+{
+    Debug.Log("A, esperando " + t + " segundos...");
+    Coroutine cr = StartCoroutine(B(t * 2));
+    yield return new WaitForSeconds(t);
+    Debug.Log("A esperando a B");
+    yield return cr;
+    Debug.Log("A ha terminado");
+}
 
+IEnumerator B(float t)
+{
+    Debug.Log("B, esperando " + t + " segundos...");
+    yield return new WaitForSeconds(t);
+    Debug.Log("B ha terminado");
+}
 ```
+
