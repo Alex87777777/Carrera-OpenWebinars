@@ -868,4 +868,43 @@ Un vector normal es un vector perpendicular a una superficie, se calcula usando 
 
 ### Trigonometría
 
-El seno 
+El seno es la razón entre la longitud del cateto opuesto al ángulo y la longitud de la hipotenusa. Por otra parte el coseno sirve para saber la relación que hay entre el cateto contiguo al ángulo y la hipotenusa del triángulo. Sus fórmulas son las siguientes:
+
+![image](https://github.com/user-attachments/assets/fe6f567f-8162-4686-a0dc-9607ea1b45cb)
+
+![image](https://github.com/user-attachments/assets/400a100d-dff9-4605-8b20-be14ee9d17a0)
+
+Por otra parte tenemos la tangente, la cual no es tan útil a la hora de desarrollar videojuegos como su contraparte, la arcotangente. La tangente es la razón que hay entre el cateto opuesto y el cateto adyacente.
+
+![image](https://github.com/user-attachments/assets/7ada35c5-a14a-4d46-8778-0d7c0053b926)
+
+Y el arcotangente es la inversa de la tangente que nos sirve para saber el ángulo que forman dos vectores.
+La mayoría de librerías matemáticas cuentan con el método atan2 que toma como parámetros el cateto opuesto y el adyacente, para evitar problemas como la división por 0.
+
+El uso de seno y coseno es muy útil en animaciones procedurales simples como se puede ver en el siguiente ejemplo:
+```csharp
+//Usa el seno para moverse en el eje y
+
+transform.localPosition = new Vector3(
+    0f,
+    Mathf.Sin(Time.time * freq),
+    0f) * amplitude;
+)
+
+//Usa el coseno para moverse en el eje x
+
+transform.localPosition = new Vector3(
+    Mathf.Cos(Time.time * freq),
+    0f,
+    0f) * amplitude;
+)
+
+//Usa ambos para moverse en ambos ejes
+
+transform.localPosition = new Vector3(
+    Mathf.Cos(Time.time * freq),
+    Mathf.Sin(Time.time * freq),
+    0f) * amplitude;
+)
+```
+
