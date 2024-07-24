@@ -850,3 +850,22 @@ El producto escalar es una operación entre dos vectores que devuelve un número
 ·dot(A, B) = (a.x * b.x) + (a.y b.y) 
 
 El resultado que obtengamos indica la relación entre los dos vectores. Si el resultado es 1, significa que los vectores son de la misma dirección y sentido, si es 0 significa que son perpendiculares y si es -1 son de misma dirección pero sentido opuesto. Esto se usa para determinar la visibilidad de un objeto o calcular la velocidad de un vehiculo relativamente a su dirección, entre otras funciones.
+
+__·24/7/2024__
+
+El producto vectorial es una operación entre vectores que da como resultado otro vector. Se calcula de la siguiente forma:
+
+magnitudA * magnitudB * seno(ángulo que formen) * N
+
+N es la normal del plano que contienen esos dos vectores.
+Como en la mayoria de casos no sabremos el ángulo que forman ni la normal, podemos usar esta otra fórmula:
+
+(a.y * b.z - a.z * b.y)i * (a.z * b.x - a.x * b.z)j * (a.x * b.y - a.y * b.x)k
+
+Esto se usa para calcular el área de un polígono por sus triángulos u obtener un punto en relación a otros dos.
+
+Un vector normal es un vector perpendicular a una superficie, se calcula usando el producto escalar. Se usa principalmente para la iluminación del juego, rebotes, determinar direcciones, etc.
+
+### Trigonometría
+
+El seno 
