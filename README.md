@@ -908,3 +908,28 @@ transform.localPosition = new Vector3(
 )
 ```
 
+### Interpolación lineal
+
+Interpolar es obtener valores a partir de otros valores conocidos. Hay varios tipos de interpolación, como la lineal, polinómica o basándonos en el vecino más cercano. Se usa para barras de progreso, desplazarse gradualemnte entre dos puntos, etc.
+La interpolación por vecino más cercano aproxima los valores al número entero más cercano que tengan (3'2 sería 3 o 3'7 sería 4).
+
+Por otra parte, en la interpolación lineal se traza una línea entre los puntos:
+
+![image](https://github.com/user-attachments/assets/3f36232b-c934-4029-ba7f-0ab5c708f04e)
+
+Y en la interpolación Spline, se usan polinomios para calcular las curvas:
+
+![image](https://github.com/user-attachments/assets/cadc2f7a-42d3-45e4-b524-219139549274)
+
+También existe el concepto de extrapolación, que es obtener valores a partir de datos existentes, pero fuera de rango, lo que es propenso a errores. Se usa para predecir valores futuros. Por ejemplo si me muevo a 10 metros por segundo lo lógico sería pensar que en 1 segundo estaré 10 metros más lejos.
+
+Para el cálculo de interpolaciones contamos con la función Lerp que se usa para obtener valores entre dos valores extremos. La fórmula de Lerp es la siguiente:
+
+![image](https://github.com/user-attachments/assets/099b4385-6fa2-4aeb-b1a5-6437988fbfa7)
+
+Si queremos saber la posición intermedia sustituimos "t" por 0.5, es decir la "t" es la posición que queremos averiguar.
+
+Dependiendo de como evolucione "t", podemos obtener diferentes tipos de interpolaciones: 
+
+![image](https://github.com/user-attachments/assets/a77bab37-911a-4389-a761-3ea063aa3720)
+
