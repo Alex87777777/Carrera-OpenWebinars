@@ -933,3 +933,10 @@ Dependiendo de como evolucione "t", podemos obtener diferentes tipos de interpol
 
 ![image](https://github.com/user-attachments/assets/a77bab37-911a-4389-a761-3ea063aa3720)
 
+En conclusión, la interpolación en juegos ayuda a conseguir movimientos más suaves y naturales para los personajes, cámara u objetos en general.
+
+__·25/7/2024__
+
+### Cuaterniones
+
+Un cuaternión es un instrumento matemática usado para describir rotaciones en 3D. Es una extensión de los números complejos y cuenta con 4 dimensiones (1 real y 3 imaginarias). Sus ventajas son que son rápidos de procesar, fáciles de interpolar y evitan problemas como Gimbal Lock. Por otra parte su principal desventaja es que son complejos de entender, aunque fáciles de utilizar.
