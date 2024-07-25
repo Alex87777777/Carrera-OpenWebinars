@@ -939,4 +939,20 @@ __·25/7/2024__
 
 ### Cuaterniones
 
-Un cuaternión es un instrumento matemática usado para describir rotaciones en 3D. Es una extensión de los números complejos y cuenta con 4 dimensiones (1 real y 3 imaginarias). Sus ventajas son que son rápidos de procesar, fáciles de interpolar y evitan problemas como Gimbal Lock. Por otra parte su principal desventaja es que son complejos de entender, aunque fáciles de utilizar.
+Un cuaternión es un instrumento matemática usado para describir rotaciones en 3D. Es una extensión de los números complejos y cuenta con 4 dimensiones (1 real y 3 imaginarias). Sus ventajas son que son rápidos de procesar, fáciles de interpolar y evitan problemas como Gimbal Lock (efecto producido cuando se alinean dos ejes de rotación, lo que provoca que se pierde un grado de libertad). Por otra parte su principal desventaja es que son complejos de entender, aunque fáciles de utilizar.
+
+En Unity tenemos la clase Quaternion para poder trabajar con rotaciones. Cuenta con varias funciones para ello, como Euler, FromToRotation (devuelve un Cuaternion que nos sirve para rotar desde el primer parámetro hasta el segundo), Angle (devuelve el ángulo que hay entre dos rotaciones), Dot (devuelve el producto escalar entre dos cuaterniones), Lerp, Slerp (sirve para hacer un Lerp esférico), LookRotation (devuelve un cuaternión que permite rotar un objeto a la dirección pasada como parámetro), RotateTowards (permite rotar a una velocidad pasada como parámetro desde un cuaternión a otro), etc.
+
+### Clase Mathf
+
+La clase Mathf es una clase estática que nos proporciona varios métodos matemáticos y propiedades, como PI, Infinito, Epsilon, etc. Algunos métodos útiles son Sin, Cos, Tan, Atan2, Lerp, Max, Min, Sqrt, entre otros.
+
+Por otra parte la clase Random de Unity es una clase estática también que nos ayuda a trabajar con valores aleatorios. Es similar a la de C# aunque esta última no es estática. Nos permite guardar estados mediante Random.State para volver en un futuro a ese estado.
+
+## Conclusión final de la carrera
+
+Una vez acabada esta carrera queda claro que el desarrollo de videojuegos es un mundo muy grande y diverso, ya que se puede hacer en muchos lenguajes diferentes, entornos variados y destinado a una gran variedad de plataformas. A lo largo de la carrera he aprendido sobre varias herramientas y tecnologías como Construct, Phaser, Typescript, C# y Unity, las cuales son mejores o peores dependiendo del contexto.
+
+Además para el desarrollo de videojuegos se necesita el trabajo de profesionales con funciones diferentes como programadores, diseñadores gráficos, artistas de sonido, testers, etc.
+
+En definitiva, esta carrera me ha ayudado a entender mejor el mundo del desarrollo de videojuegos lo que me será de gran ayuda en un futuro.
